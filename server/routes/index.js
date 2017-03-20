@@ -8,6 +8,7 @@ var Register = require('../controller/register')
 /* GET home page. */
 router.get('/users', User.getUsers)
 router.get('/user/:id', User.getUserById)
+// Register User here
 router.post('/user', User.registerUser)
 router.put('/user:id', User.updateUser)
 router.delete('/user:id', User.removeUser)
@@ -20,7 +21,7 @@ router.delete('/answer:id', Answer.removeAnswer)
 
 // Login Process
 router.post('/login', Register.login)
-// router.get('/verify/:token', Register.verify)
+router.get('/verify/:token', Register.verify)
 
 router.get('/questions', Question.getQuestions)
 router.get('/question/:id', Question.getQuestionById)

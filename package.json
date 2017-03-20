@@ -1,0 +1,19 @@
+{
+  "name": "stackoverflow",
+  "version": "1.0.0",
+  "description": "*Don't hit me please! LOL! This is just daily practice. This time, I will make mini StackOverflow using Express JS (JS Framework), Sequelize (ORM), PostgreSQL (Database). For Testing I will use Duo Mocha Chai & Nightmare for FrontEnd Testing.* :trollface: :laughing:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrhandoko/stackoverflow.git"
+  },
+  "author": "Bambang Handoko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrhandoko/stackoverflow/issues"
+  },
+  "homepage": "https://github.com/mrhandoko/stackoverflow#readme"
+}

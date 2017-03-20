@@ -5,7 +5,7 @@ var Model = require('../models')
 let Question = {}
 
 Question.getQuestions = (req, res, next) => {
-  Model.Question.findAll().then((Questions) => {
+  Model.Question.findAll({include: [{model: Model.Answer, include: [{model: Model.Vote, include: {model: Model.User}}]}, {model: Model.User}]}).then((Questions) => {
     res.send(Questions)
   })
 }
