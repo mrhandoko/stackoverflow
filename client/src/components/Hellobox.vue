@@ -7,7 +7,7 @@
       <br/>
       Join them; it only takes a minute:
       <br>
-      <button class="btn btn-info" style="margin-top:20px; margin-left:20px;">Sign Up</button>
+      <a class="btn btn-info" style="margin-top:20px; margin-left:20px; color:white;" href="/#/register">Sign Up</a>
     </div>
     <list-question></list-question>
   </div>
