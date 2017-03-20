@@ -6,6 +6,6 @@
 1. [Mentockoverflow Schema Diagram](#Diagram)
 
 ## Diagram
-![GitHub Logo](/assets/Mentockoverflow.png)
+![GitHub Logo](server/assets/Mentockoverflow.png)
 
 **[⬆ back to top](#table-of-contents)**
