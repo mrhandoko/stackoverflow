@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Hellobox from '@/components/Hellobox'
 import Register from '@/components/Register'
 import Login from '@/components/Login'
+import Question from '@/components/Question'
 
 Vue.use(Router)
 
@@ -17,9 +18,13 @@ export default new Router({
       name: 'Register',
       component: Register
     }, {
-      path: 'login',
+      path: '/login',
       name: 'Login',
       component: Login
+    }, {
+      path: '/askaquestion',
+      name: 'Question',
+      component: Question
     }
   ]
 })

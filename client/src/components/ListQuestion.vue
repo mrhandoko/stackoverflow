@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="col-xs-9">
     <h3 class="question">Top Questions</h3>
     <div v-for="question in questions">
       <div class="question">

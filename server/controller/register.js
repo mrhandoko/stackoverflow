@@ -32,7 +32,7 @@ Register.verify = (req, res, next) => {
 
   jwt.verify(token, secret, (err, decoded) => {
     if (decoded) {
-      res.json({user: true})
+      res.json({user: true, username: decoded.username})
     }
     if (!decoded) {
       res.json({user: false})

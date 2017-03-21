@@ -10,12 +10,14 @@
       <a class="btn btn-info" style="margin-top:20px; margin-left:20px; color:white;" href="/#/register">Sign Up</a>
     </div>
     <list-question></list-question>
+    <sidebar></sidebar>
   </div>
 </template>
 
 <script>
 
 import ListQuestion from './ListQuestion'
+import Sidebar from './Sidebar'
 
 export default {
   name: 'hellobox',
@@ -25,7 +27,8 @@ export default {
     }
   },
   components: {
-    ListQuestion
+    ListQuestion,
+    Sidebar
   }
 }
 </script>

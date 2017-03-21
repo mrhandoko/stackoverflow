@@ -8,7 +8,6 @@
 
 <script>
 import Navbar from './components/Navbar'
-import Register from './components/Register'
 
 export default {
   name: 'app',
@@ -18,8 +17,7 @@ export default {
     }
   },
   components: {
-    'navbar': Navbar,
-    'register': Register,
+    'navbar': Navbar
   }
 }
 </script>

@@ -29,6 +29,10 @@ Question.createQuestion = (req, res, next) => {
   })
 }
 
+// Question.setUserQuestion = (req, res, next) => {
+//   Model.User.find({where: {username : req.params.id}})
+// }
+
 Question.updateQuestion = (req, res, next) => {
   Model.Question.update({where: {id: req.params.id }}).then((Question) => {
     res.send(Question)
