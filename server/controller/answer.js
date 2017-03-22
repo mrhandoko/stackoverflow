@@ -17,14 +17,11 @@ Answer.getAnswerById = (req, res, next) => {
 }
 
 Answer.createAnswer = (req, res, next) => {
-  let dataAnswer = {
-    fullname: req.body.fullname,
-    Answername: req.body.Answername,
-    email: req.body.email,
-    password: req.body.password
-  }
-
-  Model.Answer.create(dataAnswer).then((Answer) => {
+  Model.Answer.create({
+    answer: req.body.answer,
+    QuestionId: req.body.QuestionId,
+    UserId: req.body.UserId
+  }).then((Answer) => {
     res.send(Answer)
   })
 }

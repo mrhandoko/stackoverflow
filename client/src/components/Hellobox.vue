@@ -1,7 +1,7 @@
 <template>
     <div class="container">
       <div class="hellobox">
-      <h3>Join the Mentock Overflow Community</h3>
+      <h4>Join the Mentock Overflow Community</h4>
       <hr>
       tack Overflow is a community of 6.9 million programmers, just like you, helping each other.
       <br/>
@@ -35,6 +35,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 .hellobox {
   padding-top: 20px;
   padding-bottom: 20px;

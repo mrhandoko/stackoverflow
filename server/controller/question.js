@@ -11,18 +11,12 @@ Question.getQuestions = (req, res, next) => {
 }
 
 Question.getQuestionById = (req, res, next) => {
-  Model.Question.findById(req.params.id).then((Question) => {
+  Model.Question.findById(req.params.id, {include: [{model: Model.Answer, include: [{model: Model.Vote, include: {model: Model.User}}]}, {model: Model.User}]}).then((Question) => {
     res.send(Question)
   })
 }
 
 Question.createQuestion = (req, res, next) => {
-  // let dataQuestion = {
-  //   title: req.body.title,
-  //   content: req.body.content,
-  //   UserId: req.body.userid
-  // }
-
   Model.Question.create({
     title: req.body.title,
     content: req.body.content,

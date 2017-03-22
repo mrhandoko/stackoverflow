@@ -4,6 +4,7 @@ var User = require('../controller/user')
 var Answer = require('../controller/answer')
 var Question = require('../controller/question')
 var Register = require('../controller/register')
+var Vote = require('../controller/vote')
 
 /* GET home page. */
 router.get('/users', User.getUsers)
@@ -18,6 +19,9 @@ router.get('/answer/:id', Answer.getAnswerById)
 router.post('/answer', Answer.createAnswer)
 router.put('/answer:id', Answer.updateAnswer)
 router.delete('/answer:id', Answer.removeAnswer)
+
+router.post('/vote', Vote.createVote)
+router.delete('/vote/:UserId/:AnswerId', Vote.removeVote)
 
 // Login Process
 router.post('/login', Register.login)

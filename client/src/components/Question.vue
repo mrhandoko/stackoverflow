@@ -58,8 +58,7 @@ export default {
     }
   },
   mounted() {
-    this.getToken(),
-    this.onSubmitQuestion()
+    this.getToken()
   }
 }
 </script>

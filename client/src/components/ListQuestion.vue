@@ -11,7 +11,7 @@
               </center>
           </div>
         </div>
-        <div class="summary"><a href="">{{ question.title }}</a></div>
+        <div class="summary"><router-link :to="{ name: 'Detail', params: { id: question.id }}">{{ question.title }}</router-link></div>
       </div>
     </div>
   </div>

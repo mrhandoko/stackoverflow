@@ -4,6 +4,7 @@ import Hellobox from '@/components/Hellobox'
 import Register from '@/components/Register'
 import Login from '@/components/Login'
 import Question from '@/components/Question'
+import Detail from '@/components/Detail'
 
 Vue.use(Router)
 
@@ -25,6 +26,11 @@ export default new Router({
       path: '/askaquestion',
       name: 'Question',
       component: Question
+    }, {
+      path:'/detail/:id',
+      name: 'Detail',
+      props: true,
+      component: Detail
     }
   ]
 })
