@@ -32,7 +32,9 @@ Register.verify = (req, res, next) => {
 
   jwt.verify(token, secret, (err, decoded) => {
     if (decoded) {
-      res.json({user: true, username: decoded.username})
+      Model.User.find({where:{username : decoded.username}}).then((data) => {
+        res.json({user: true, userdata: data})
+      })
     }
     if (!decoded) {
       res.json({user: false})

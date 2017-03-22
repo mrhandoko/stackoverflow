@@ -17,21 +17,20 @@ Question.getQuestionById = (req, res, next) => {
 }
 
 Question.createQuestion = (req, res, next) => {
-  let dataQuestion = {
-    fullname: req.body.fullname,
-    Questionname: req.body.Questionname,
-    email: req.body.email,
-    password: req.body.password
-  }
+  // let dataQuestion = {
+  //   title: req.body.title,
+  //   content: req.body.content,
+  //   UserId: req.body.userid
+  // }
 
-  Model.Question.create(dataQuestion).then((Question) => {
+  Model.Question.create({
+    title: req.body.title,
+    content: req.body.content,
+    UserId: req.body.userid
+  }).then((Question) => {
     res.send(Question)
   })
 }
-
-// Question.setUserQuestion = (req, res, next) => {
-//   Model.User.find({where: {username : req.params.id}})
-// }
 
 Question.updateQuestion = (req, res, next) => {
   Model.Question.update({where: {id: req.params.id }}).then((Question) => {

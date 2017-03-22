@@ -14,7 +14,7 @@
   			    	 <div class="form-group">
   			    	   <textarea class="form-control" placeholder="question" rows="15" v-model="dataQuestion.question"></textarea>
   			    	 </div>
-  			    		<input class="btn btn-lg btn-success btn-block" value="Submit Question" v-on:click="onSubmitQuestion">
+  			    		<button class="btn btn-lg btn-success btn-block"  v-on:click="onSubmitQuestion">Submit Question</button>
   			     </fieldset>
     		   </div>
     		</div>
@@ -31,27 +31,35 @@ export default {
     return {
       dataQuestion: {
         title: '',
-        question: ''
+        question: '',
+        userid: ''
       }
     }
   },
   methods: {
     getToken() {
+      let self = this
       let token  = JSON.parse(localStorage.getItem("token"))
       axios.get('http://localhost:3000/api/verify/' + token).then((response) => {
         if (!response.data.user) {
           window.location = 'http://localhost:8080/#/login'
         } else {
-          console.log(response.data.username);
+          self.dataQuestion.userid = response.data.userdata.id
         }
       })
     },
     onSubmitQuestion() {
-
+      let self = this
+      console.log(self.dataQuestion);
+      axios.post('http://localhost:3000/api/question', self.dataQuestion).then((response) => {
+        console.log(response)
+        window.location = 'http://localhost:8080/#/'
+      })
     }
   },
   mounted() {
-    this.getToken()
+    this.getToken(),
+    this.onSubmitQuestion()
   }
 }
 </script>
